@@ -41,6 +41,11 @@ function generatePassword() {
       characterPool = characterPool + specialCharacters;
     }
 
+    if (wantLowercase == false && wantUppercase == false && wantNumeric == false && wantSpecialCharacters == false) {
+      alert("You must click OK for at least one of the 4!");
+      return;
+    }
+
     var randomPassword = "";
     for(var i =0; i < numberOfCharacters; i++) {
       randomPassword = randomPassword + characterPool[Math.floor(Math.random() * characterPool.length)];
