@@ -12,6 +12,11 @@ function writePassword() {
 
 function generatePassword() {
   var numberOfCharacters = prompt("How many characters would you like in your password? \n (Choose between 8 & 128");
+  var characterPool = "";
+  var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numerics = "0123456789";
+  var specialCharacters = "!@#$%^&*()";
 
   if (numberOfCharacters >= 8 && numberOfCharacters <= 128)
   {
@@ -20,7 +25,26 @@ function generatePassword() {
     var wantNumeric = confirm("Do you want the password to have Numbers?");
     var wantSpecialCharacters = confirm("Do you want the password to have Special Characters?");
 
-  } else {
+    if (wantLowercase != false) {
+      characterPool = characterPool + lowercaseLetters;
+    }
+
+    if (wantUppercase != false) {
+      characterPool = characterPool + uppercaseLetters;
+    }
+
+    if (wantNumeric != false) {
+      characterPool = characterPool + numerics;
+    }
+
+    if (wantSpecialCharacters != false) {
+      characterPool = characterPool + specialCharacters;
+    }
+
+    console.log(characterPool);
+
+  } 
+  else {
     alert("Invalid input, try again");
     return;
   }
