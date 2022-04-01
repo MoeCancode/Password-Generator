@@ -20,10 +20,10 @@ function generatePassword() {
 
   if (numberOfCharacters >= 8 && numberOfCharacters <= 128)
   {
-    var wantLowercase = confirm("Do you want the password to have Lowercase letters?");
-    var wantUppercase = confirm("Do you want the password to have Uppercase letters?");
-    var wantNumeric = confirm("Do you want the password to have Numbers?");
-    var wantSpecialCharacters = confirm("Do you want the password to have Special Characters?");
+    var wantLowercase = confirm("Do you want the password to have Lowercase letters? \n Click OK for YES, click Cancel for NO");
+    var wantUppercase = confirm("Do you want the password to have Uppercase letters? \n Click OK for YES, click Cancel for NO");
+    var wantNumeric = confirm("Do you want the password to have Numbers? \n Click OK for YES, click Cancel for NO");
+    var wantSpecialCharacters = confirm("Do you want the password to have Special Characters? \n Click OK for YES, click Cancel for NO");
 
     if (wantLowercase != false) {
       characterPool = characterPool + lowercaseLetters;
