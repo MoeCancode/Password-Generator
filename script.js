@@ -46,7 +46,7 @@ function generatePassword() {
       randomPassword = randomPassword + characterPool[Math.floor(Math.random() * characterPool.length)];
     }
 
-    console.log(randomPassword);
+    return randomPassword;
 
   } 
   else {
