@@ -41,7 +41,12 @@ function generatePassword() {
       characterPool = characterPool + specialCharacters;
     }
 
-    console.log(characterPool);
+    var randomPassword = "";
+    for(var i =0; i < numberOfCharacters; i++) {
+      randomPassword = randomPassword + characterPool[Math.floor(Math.random() * characterPool.length)];
+    }
+
+    console.log(randomPassword);
 
   } 
   else {
